@@ -16,6 +16,13 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
       controller: 'DashboardCtrl'
     })
 
+    // 登录
+    .state('login', {
+      url: '/login',
+      templateUrl: 'views/login.html',
+      data: {}
+    })
+
     //用户注册
     .state('registration', {
       url: '/registration',
@@ -32,15 +39,15 @@ angular
     maxDisplayPageCount: 7, // 最大显示的分页数
     size: 10, // 默认每页大小
     xAuthTokenName: 'x-auth-token', // 认证字段
-    apiUrl: 'http://api.measurement.mengyunzhi.cn:8080', // api接口地址
+    apiUrl: 'http://api.myCodeRepository.mengyunzhi.cn:8080', // api接口地址
     // apiUrl: 'http://192.168.30.183:9070',
     loginPath: '/login', // 入口地址
     mainPath: '/dashboard', // 首页地址
     cookiesExpiresTime: 1800000, // cookies过期时间
     rootScopeConfig: { // rootScope的配置信息
-      title: '计量信息管理服务平台',
-      owner: '赤峰市工商管理质量技术监督局',
-      technicalSupport: '<a href="http://lfshitong.com" target="_blank">世通科技有限公司</a>',
+      title: '我的代码库',
+      owner: '梦云智',
+      technicalSupport: '<a href="https://chuhang123.github.io/" target="_blank">chuhang 技术不宅</a>',
       beginYear: 2015,
       currentYear: (new Date()).getFullYear()
     },

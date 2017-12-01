@@ -17,5 +17,6 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',                // Angular flexible routing
+    'ui.bootstrap',                // Angular flexible routing
     'angular-loading-bar'       // loading-bar
   ]);
