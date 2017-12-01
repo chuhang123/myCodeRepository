@@ -109,7 +109,7 @@ angular
     // cfpLoadingBarProvider.spinnerTemplate = '';
   }])
   .config(configState)
-  .run(function($rootScope, $state, editableOptions, UserServer, $location, config, configOptions) {
+  .run(function($rootScope, $state, UserServer, $location, config) {
     // 检测当前用户状态，
     UserServer.checkUserIsLogin(function(status) {
       if (status === true) {
@@ -126,7 +126,5 @@ angular
     // 设置系统信息
     $rootScope.config = config.rootScopeConfig;
     $rootScope.$state = $state;
-    editableOptions.theme = 'bs3';
-    $rootScope.theme = configOptions.themes[1];
   });
 
