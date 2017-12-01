@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7da2c26e-e06b-48a0-a34b-e70cd8a973e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../webapp/app/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mengyunzhi/ApiApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/mengyunzhi/ApiApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../webapp/app/styles/css/loading.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../webapp/app/styles/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../webapp/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/app/index.html" afterPath="$PROJECT_DIR$/../webapp/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/app/scripts/config.js" afterPath="$PROJECT_DIR$/../webapp/app/scripts/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/app/scripts/app.js" afterPath="$PROJECT_DIR$/../webapp/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/app/scripts/controllers/login.js" afterPath="$PROJECT_DIR$/../webapp/app/scripts/controllers/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/app/views/login.html" afterPath="$PROJECT_DIR$/../webapp/app/views/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/bower.json" afterPath="$PROJECT_DIR$/../webapp/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../webapp/test/karma.conf.js" afterPath="$PROJECT_DIR$/../webapp/test/karma.conf.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -552,7 +554,7 @@
       <workItem from="1511960144786" duration="220000" />
       <workItem from="1511963226006" duration="3141000" />
       <workItem from="1512019952125" duration="324000" />
-      <workItem from="1512107876521" duration="3079000" />
+      <workItem from="1512107876521" duration="3678000" />
     </task>
     <servers />
   </component>
@@ -562,7 +564,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12421000" />
+    <option name="totallyTimeSpent" value="13020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="-4" width="1855" height="1084" extended-state="6" />

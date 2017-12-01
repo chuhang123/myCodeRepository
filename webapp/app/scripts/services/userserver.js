@@ -44,6 +44,8 @@ angular.module('webappApp')
       }
     };
 
+    // todo login
+
 
     // 判断当前用户是否登录
     self.checkUserIsLogin = function (callback) {

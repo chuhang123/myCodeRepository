@@ -18,5 +18,6 @@ angular
     'ngTouch',
     'ui.router',                // Angular flexible routing
     'ui.bootstrap',                // Angular flexible routing
+    'bm.bsTour',                // Angular bootstrap tour
     'angular-loading-bar'       // loading-bar
   ]);
