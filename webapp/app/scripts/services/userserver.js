@@ -8,7 +8,7 @@
  * Service in the webappApp.
  */
 angular.module('webappApp')
-  .service('UserServer', function ($cookies, $http) {
+  .service('UserServer', function ($cookies, $http, config) {
     var self = this;
     var cacheKey = 'userId';
 
@@ -44,7 +44,33 @@ angular.module('webappApp')
       }
     };
 
-    // todo login
+    // 登录
+    self.login = function (user, callback) {
+      var headers = {authorization: 'Basic ' + btoa(user.username + ':' + user.password)};
+      $http.get('/User/login', {headers: headers})
+        .then(function success(response) {
+            // 获取header中传回的x-auth-token并进行cookie
+            var xAuthToken = response.headers(config.xAuthTokenName);
+            if (xAuthToken) {
+              self.init();
+              $cookies.put(config.xAuthTokenName, xAuthToken, {expires: CommonService.getCookiesExpireDate()});
+              self.setCurrentLoginUser(response.data);
+              callback(response.status);
+            } else {
+              console.log('获取' + config.xAuthTokenName + '发生错误，获取到的值为：' + xAuthToken);
+              callback(400);
+            }
+          },
+          function error(response) {
+            // 发生错误，如果为401，说明用户名密码错误。如果不是401则系统错误
+            var status = response.status;
+            if (status !== 401) {
+              console.log('网络错误');
+              console.log(response);
+            }
+            callback(response.status);
+          });
+    };
 
 
     // 判断当前用户是否登录
@@ -56,5 +82,12 @@ angular.module('webappApp')
           callback(false);
         }
       });
+    };
+
+    return {
+      init: self.init,
+      setCurrentLoginUser: self.setCurrentLoginUser,
+      getCurrentLoginUser: self.getCurrentLoginUser,
+      checkUserIsLogin: self.checkUserIsLogin
     };
   });
