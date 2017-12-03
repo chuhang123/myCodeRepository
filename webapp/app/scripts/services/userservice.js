@@ -8,7 +8,7 @@
  * Service in the webappApp.
  */
 angular.module('webappApp')
-  .service('UserServer', function ($cookies, $http, config) {
+  .service('UserService', function ($cookies, $http, config, CommonService) {
     var self = this;
     var cacheKey = 'userId';
 
@@ -88,6 +88,7 @@ angular.module('webappApp')
       init: self.init,
       setCurrentLoginUser: self.setCurrentLoginUser,
       getCurrentLoginUser: self.getCurrentLoginUser,
-      checkUserIsLogin: self.checkUserIsLogin
+      checkUserIsLogin: self.checkUserIsLogin,
+      login: self.login
     };
   });

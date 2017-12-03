@@ -32,6 +32,7 @@ module.exports = function(config) {
       'bower_components/bootstrap-tour/build/js/bootstrap-tour.js',
       'bower_components/bootstrap-tour/build/js/bootstrap-tour-standalone.js',
       'bower_components/angular-bootstrap-tour/dist/angular-bootstrap-tour.js',
+      'bower_components/sweetalert/lib/sweet-alert.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-loading-bar/build/loading-bar.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',

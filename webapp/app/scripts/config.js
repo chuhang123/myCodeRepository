@@ -116,9 +116,9 @@ angular
     // cfpLoadingBarProvider.spinnerTemplate = '';
   }])
   .config(configState)
-  .run(function($rootScope, $state, UserServer, $location, config) {
+  .run(function($rootScope, $state, UserService, $location, config) {
     // 检测当前用户状态，
-    UserServer.checkUserIsLogin(function(status) {
+    UserService.checkUserIsLogin(function(status) {
       if (status === true) {
         // 已登录, 注册路由
       } else {
