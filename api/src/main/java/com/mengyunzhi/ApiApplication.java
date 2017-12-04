@@ -17,14 +17,14 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class, args);
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                // 允许跨域请求
-                registry.addMapping("/**").allowedOrigins("http://localhost:9000");
-            }
-        };
-    }
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurerAdapter() {
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                // 允许跨域请求
+//                registry.addMapping("/**").allowedOrigins("http://localhost:9000");
+//            }
+//        };
+//    }
 }
