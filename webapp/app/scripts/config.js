@@ -8,12 +8,17 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
   $urlRouterProvider.otherwise(config.defaultRoute);
   $stateProvider
 
+    .state('main', {
+      abstract: true, // 表示此路由不对应具体的页面
+      url: '/main',
+      templateUrl: 'views/dashboard.html' // 模板文件
+    })
+
     // 仪表台 -- 首页
     .state('main.dashboard', {
       url: '/dashboard',
       templateUrl: 'views/dashboard.html',
-      data: {},
-      controller: 'DashboardCtrl'
+      data: {}
     })
 
     // 登录
@@ -46,7 +51,7 @@ angular
     cookiesExpiresTime: 1800000, // cookies过期时间
     rootScopeConfig: { // rootScope的配置信息
       title: '我的代码库',
-      owner: '梦云智',
+      owner: '梦云智软件开发团队',
       technicalSupport: '<a href="https://chuhang123.github.io/" target="_blank">chuhang 技术不宅</a>',
       beginYear: 2015,
       currentYear: (new Date()).getFullYear()

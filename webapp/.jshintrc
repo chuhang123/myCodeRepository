@@ -3,7 +3,7 @@
   "browser": true,
   "curly": true,
   "eqeqeq": true,
-  "esnext": true,
+  "esnext": false,
   "latedef": true,
   "noarg": true,
   "node": true,
@@ -11,7 +11,8 @@
   "undef": true,
   "unused": true,
   "globals": {
-    "angular": false
-  },
-  "predef": ["angular"]
+    "angular": false,
+    "require": false,
+    "console": false
+  }
 }

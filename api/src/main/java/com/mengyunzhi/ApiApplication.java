@@ -3,9 +3,7 @@ package com.mengyunzhi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.session.web.http.HeaderHttpSessionStrategy;
 
 /**
  * Created by chuhang on 17-11-25
@@ -17,14 +15,10 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class, args);
     }
 
-//    @Bean
-//    public WebMvcConfigurer corsConfigurer() {
-//        return new WebMvcConfigurerAdapter() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//                // 允许跨域请求
-//                registry.addMapping("/**").allowedOrigins("http://localhost:9000");
-//            }
-//        };
-//    }
+    // 设置HttpSession策略。默认读取header中的X-Auth-Token,作为sessionId。
+    @Bean
+    HeaderHttpSessionStrategy sessionStrategy() {
+        return new HeaderHttpSessionStrategy();
+    }
+
 }

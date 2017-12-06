@@ -28,12 +28,12 @@ public class UserController {
         return userService.get(id);
     }
 
-//    @GetMapping("/login")
-//    public User login(Principal user) {
-//        log.info("-----------------登录成功----------------");
-//        log.info("登录用户:" + user.getName());
-//
-//        return userService.getCurrentLoginUser();
-//    }
+    @GetMapping("/login")
+    public User login(Principal user) {
+        logger.info("-----------------登录成功----------------");
+        logger.info("登录用户:" + user.getName());
+
+        return userService.getCurrentLoginUser();
+    }
 
 }
