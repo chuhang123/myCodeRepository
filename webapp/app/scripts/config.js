@@ -28,12 +28,64 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
       data: {}
     })
 
-    //用户注册
+    // 用户注册
     .state('registration', {
       url: '/registration',
       templateUrl: 'views/registration.html',
       data: {},
       controller: 'RegistrationCtrl'
+    })
+
+    // 系统设置
+    .state('system', {
+      // 路由值
+      abstract: true, // 表示此路由不对应具体的页面
+      url: '/system',
+      templateUrl: 'views/common/content.html', // 模板文件
+      data: {
+        pageTitle: '系统设置'
+      }
+    })
+
+    // 菜单管理
+    .state('system.Menu', {
+      // 路由值, 表示该值继承于system
+      url: '/Menu',
+      templateUrl: 'views/system/menu/index.html',
+      data: {
+        pageTitle: '系统设置-菜单管理',
+        pageDesc: '计量系统菜单管理'
+      }
+    })
+
+    // 角色管理
+    .state('system.role', {
+      url: '/role',
+      templateUrl: 'views/role/rolefile/index.html',
+      data: {
+        pageTitle: '角色管理',
+        pageDesc: '计量系统角色管理'
+      }
+    })
+
+    // 标准器类别管理
+    .state('system.standardInstrumentType', {
+      url: '/standardInstrumentType',
+      templateUrl: 'views/standardInstrumentType/rolefile/index.html',
+      data: {
+        pageTitle: '标准器类别管理',
+        pageDesc: '计量系统角色管理'
+      }
+    })
+
+    //个人中心
+    .state('Personal', {
+        // 路由值
+        url: '/Personal',
+        templateUrl: 'views/common/content.html',
+        data: {
+          pageTitle: '个人中心'
+        }
     });
 }
 

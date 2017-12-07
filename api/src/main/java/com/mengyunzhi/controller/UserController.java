@@ -1,6 +1,8 @@
 package com.mengyunzhi.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.mengyunzhi.repository.User;
+import com.mengyunzhi.repository.WebAppMenu;
 import com.mengyunzhi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -34,6 +37,11 @@ public class UserController {
         logger.info("登录用户:" + user.getName());
 
         return userService.getCurrentLoginUser();
+    }
+
+    @GetMapping("/getCurrentUserWebAppMenus/")
+    public List<WebAppMenu> getCurrentUserWebAppMenus() {
+        return userService.getCurrentUserWebAppMenus();
     }
 
 }

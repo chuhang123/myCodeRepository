@@ -8,7 +8,7 @@
  * Service in the webappApp.
  */
 angular.module('webappApp')
-  .service('WebAppMenuService', ['$http', 'CommonService', '$timeout', function ($http, CommonService) {
+  .service('WebAppMenuService', ['$http', 'CommonService', '$timeout', '$state', function ($http, CommonService, $timeout, $state) {
     var self = this;
     // 数据初始化
     self.init = function () {
@@ -19,6 +19,8 @@ angular.module('webappApp')
       self.currentUserAllowMenus = [];        // 当前用户拥有的权限
       self.currentUserAllowMenuIds = [];      // 当前用户拥有权限的ID权组
     };
+
+    self.init();
 
     /**
      * 获取菜单树
@@ -67,7 +69,9 @@ angular.module('webappApp')
         var name = names.pop();
         self.getMenuByRouteName(name, callback);
       } else {
-        //todo self.getCurrentMenu(callback);
+        state.to  =  {};
+        state.to.name = 'main';
+        self.getCurrentMenu(callback);
       }
     };
 
@@ -283,6 +287,7 @@ angular.module('webappApp')
 
         // 获取路由
         scope.getRoute = function (menu) {
+          console.log(self.getRouteFromMenu(menu));
           return self.getRouteFromMenu(menu);
         };
 

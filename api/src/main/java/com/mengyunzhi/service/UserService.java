@@ -1,8 +1,10 @@
 package com.mengyunzhi.service;
 
 import com.mengyunzhi.repository.User;
+import com.mengyunzhi.repository.WebAppMenu;
 
 import java.security.Principal;
+import java.util.List;
 
 /**
  * Created by chuhang on 17-11-29
@@ -14,4 +16,7 @@ public interface UserService {
     User getCurrentLoginUser();
 
     Principal getCurrentLoginPrincipalUser();
+
+    // 获取当前用户的前台菜单列表
+    List<WebAppMenu> getCurrentUserWebAppMenus();
 }
