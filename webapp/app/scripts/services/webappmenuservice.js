@@ -287,7 +287,6 @@ angular.module('webappApp')
 
         // 获取路由
         scope.getRoute = function (menu) {
-          console.log(self.getRouteFromMenu(menu));
           return self.getRouteFromMenu(menu);
         };
 

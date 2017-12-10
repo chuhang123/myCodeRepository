@@ -14,7 +14,6 @@ angular.module('webappApp')
       link: function postLink(scope, element, attrs) {
         var self = this;
         WebAppMenuService.sideNavigationInit(self, scope, function() {
-          console.log(scope);
           // Colapse menu in mobile mode after click on element
           var menuElement = $('#' + attrs.id + ' a:not([href$="\\#"])');
           menuElement.click(function () {
@@ -35,7 +34,6 @@ angular.module('webappApp')
             });
           }
         });
-        console.log(scope);
       }
     };
   });

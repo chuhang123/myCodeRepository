@@ -55,7 +55,8 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
       data: {
         pageTitle: '系统设置-菜单管理',
         pageDesc: '计量系统菜单管理'
-      }
+      },
+      controller: "SystemMenuIndexCtrl"
     })
 
     // 角色管理

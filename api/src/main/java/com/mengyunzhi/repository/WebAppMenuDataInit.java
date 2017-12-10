@@ -24,7 +24,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
     protected Set<WebAppMenu> webAppMenus = new HashSet<>();
 
     // 权重
-    protected int weight = HIGHEST_PRECEDENCE;
+    protected int weight = 0;
 
     private WebAppMenu mainMenu;
     @Override
@@ -36,8 +36,9 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
             mainMenu.setAbstract(true);
             mainMenu.setTemplateUrl("views/main.html");
             mainMenu.setShow(false);
-            mainMenu.setName("用于仪表台及大数据平台继承");
+            mainMenu.setName("首页");
             mainMenu.setRouteName("main");
+            mainMenu.setDescription("系统主界面");
             mainMenu.setWeight(weight++);
             webAppMenus.add(mainMenu);
 
@@ -62,6 +63,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         standardMenu.setRouteName("standard");
         standardMenu.setWeight(weight++);
         standardMenu.setName("标准装置管理");
+        standardMenu.setDescription("标准装置管理");
         webAppMenus.add(standardMenu);
 
         WebAppMenu standardFileMenu = new WebAppMenu();
@@ -69,7 +71,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         standardFileMenu.setParentRouteWebAppMenu(standardMenu);
         standardFileMenu.setParentWebAppMenu(standardMenu);
         standardFileMenu.setName("综合查询");
-        standardFileMenu.setDescription("技术机构管理技术机构计量标准装置综合查询");
+        standardFileMenu.setDescription("标准装置的综合查询");
         standardFileMenu.setWeight(weight++);
         webAppMenus.add(standardFileMenu);
 
@@ -78,7 +80,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         deviceSetManageMenu.setParentRouteWebAppMenu(standardMenu);
         deviceSetManageMenu.setParentWebAppMenu(standardMenu);
         deviceSetManageMenu.setName("档案管理");
-        deviceSetManageMenu.setDescription("技术机构 -- 标准装置管理");
+        deviceSetManageMenu.setDescription("标准装置的信息管理");
         deviceSetManageMenu.setWeight(weight++);
         webAppMenus.add(deviceSetManageMenu);
 
@@ -88,7 +90,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         standardAuthorizationManageMenu.setParentWebAppMenu(standardMenu);
         standardAuthorizationManageMenu.setName("授权检定项目管理");
         standardAuthorizationManageMenu.setWeight(weight++);
-        standardAuthorizationManageMenu.setDescription("授权检定项目综合管理");
+        standardAuthorizationManageMenu.setDescription("授权检定项目的信息管理");
         webAppMenus.add(standardAuthorizationManageMenu);
     }
 
@@ -109,11 +111,13 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         systemConfigMenu.setAbstract(true);
         systemConfigMenu.setRouteName("system");
         systemConfigMenu.setWeight(weight++);
+        systemConfigMenu.setDescription("系统设置");
         webAppMenus.add(systemConfigMenu);
 
         WebAppMenu userMenu = new WebAppMenu();
         userMenu.setName("用户管理");
         userMenu.setRouteName("Userfile");
+        userMenu.setDescription("用户信息管理");
         userMenu.setParentRouteWebAppMenu(systemConfigMenu);
         userMenu.setParentWebAppMenu(systemConfigMenu);
         userMenu.setWeight(weight++);
@@ -122,6 +126,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
 
         WebAppMenu roleMenu = new WebAppMenu();
         roleMenu.setName("角色管理");
+        roleMenu.setDescription("角色信息管理");
         roleMenu.setRouteName("role");
         roleMenu.setWeight(weight++);
         roleMenu.setParentWebAppMenu(systemConfigMenu);
@@ -130,7 +135,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
 
         WebAppMenu systemMenuMenu = new WebAppMenu();
         systemMenuMenu.setName("菜单管理");
-        systemMenuMenu.setDescription("计量系统菜单管理");
+        systemMenuMenu.setDescription("菜单信息查询");
         systemMenuMenu.setRouteName("Menu");
         systemMenuMenu.setWeight(weight++);
         systemMenuMenu.setParentRouteWebAppMenu(systemConfigMenu);
@@ -140,7 +145,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         logger.info("增加标准器具类别路由");
         WebAppMenu standardInstrumentTypeMenu = new WebAppMenu();
         standardInstrumentTypeMenu.setName("标准器类别管理");
-        standardInstrumentTypeMenu.setDescription("标准器类别管理，每种器具都应该是器具类别的一种");
+        standardInstrumentTypeMenu.setDescription("标准器类别的信息管理");
         standardInstrumentTypeMenu.setRouteName("standardInstrumentType");
         standardInstrumentTypeMenu.setWeight(weight++);
         standardInstrumentTypeMenu.setParentWebAppMenu(systemConfigMenu);
