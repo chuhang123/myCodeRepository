@@ -8,7 +8,7 @@
  * Service in the webappApp.
  */
 angular.module('webappApp')
-  .service('UserService', function ($cookies, $http, config, CommonService) {
+  .service('UserService', function ($cookies, $http, $route, config, CommonService, WebAppMenuService) {
     var self = this;
     var cacheKey = 'userId';
 
@@ -84,11 +84,24 @@ angular.module('webappApp')
       });
     };
 
+    // 注销
+    self.logout = function (callback) {
+      // 移除cookie
+      $cookies.remove(cacheKey);
+      $cookies.remove(config.xAuthTokenName);
+
+      // 重设当前用户菜单
+      WebAppMenuService.currentUserMenuTree = [];
+      $route.reload();
+      callback();
+    };
+
     return {
       init: self.init,
       setCurrentLoginUser: self.setCurrentLoginUser,
       getCurrentLoginUser: self.getCurrentLoginUser,
       checkUserIsLogin: self.checkUserIsLogin,
-      login: self.login
+      login: self.login,
+      logout: self.logout
     };
   });

@@ -11,26 +11,6 @@ angular.module('webappApp')
   .controller('SystemMenuIndexCtrl', function ($scope, WebAppMenuService) {
     var self = this;
 
-    Array.prototype.Filted = function() {
-      var res = [];
-      for (var i = 0; i < this.length; i++) {
-        if (this[i] !== 0) {
-          res.push(this[i]);
-        }
-      }
-      return res;
-    };
-
-    var test = ['fsdf', 2, 0];
-
-    for (var o in test) {
-      console.log(test[o]);
-    }
-
-    for (var m = 0; m < test.length; m++) {
-      console.log(test[m]);
-    }
-
     // 定义显示方法
     var showData = function () {
       // 获取后台数据

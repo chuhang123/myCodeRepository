@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/bootstrap-tour/build/css/bootstrap-tour.css" />
     <link rel="stylesheet" href="bower_components/bootstrap-tour/build/css/bootstrap-tour-standalone.css" />
-    <link rel="stylesheet" href="bower_components/sweetalert/lib/sweet-alert.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/css/loading.css">
     <link rel="stylesheet" href="styles/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
     <!-- endbuild -->
@@ -49,14 +49,15 @@
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.js"></script>
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour-standalone.js"></script>
     <script src="bower_components/angular-bootstrap-tour/dist/angular-bootstrap-tour.js"></script>
-    <script src="bower_components/sweetalert/lib/sweet-alert.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!--防止grunt serve被删除-->
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/iCheck/icheck.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/config.js"></script>
     <script src="scripts/webappApp.js"></script>
@@ -66,6 +67,8 @@
     <script src="scripts/factory/sweetalert.js"></script>
     <script src="scripts/services/commonservice.js"></script>
     <script src="scripts/directives/yunzhisidenavigation.js"></script>
+    <script src="scripts/directives/directives.js"></script>
+    <script src="scripts/directives/touchSpin.js"></script>
     <script src="scripts/services/webappmenuservice.js"></script>
     <script src="scripts/controllers/system/menu/index.js"></script>
     <script src="scripts/filters/chineseofboolean.js"></script>

@@ -12,24 +12,6 @@ angular.module('webappApp')
     var self = this;
     UserService.init();
 
-
-    var test = ['fsdf', 2, 0];
-    Array.prototype.Filted = function() {
-      var res = [];
-      for (var i = 0; i < this.length; i++) {
-        if (this[i] !== 0) {
-          res.push(this[i]);
-        }
-      }
-      return res;
-    };
-    for (var o in test) {
-      console.log(test[o]);
-    }
-    for (var m = 0; m < test.length; m++) {
-      console.log(test[m]);
-    }
-
     // 初始化用户
     self.login = function (user) {
       UserService.login(user, function (status) {

@@ -7,7 +7,7 @@
 
 angular
   .module('webappApp')
-  .controller('appCtrl', ['$http', '$scope', '$timeout', '$location', 'config', function($http, $scope, $timeout, $location, config) {
+  .controller('appCtrl', ['$http', '$scope', '$timeout', '$location', 'config', 'UserService', function($http, $scope, $timeout, $location, config, UserService) {
 
     // For iCheck purpose only
     $scope.checkOne = true;
@@ -25,7 +25,7 @@ angular
       negBarColor: '#53ac2a'
     };
     $scope.chartIncomeData = [{
-      label: "line",
+      label: 'line',
       data: [
         [1, 10],
         [2, 26],
@@ -42,11 +42,11 @@ angular
           show: true,
           lineWidth: 0,
           fill: true,
-          fillColor: "#64cc34"
+          fillColor: '#64cc34'
 
         }
       },
-      colors: ["#62cb31"],
+      colors: ['#62cb31'],
       grid: {
         show: false
       },
@@ -59,7 +59,7 @@ angular
      * Tooltips and Popover - used for tooltips in components view
      */
     $scope.dynamicTooltip = 'Hello, World!';
-    $scope.htmlTooltip = "I\'ve been made <b>bold</b>!";
+    $scope.htmlTooltip = 'I\'ve been made <b>bold</b>!';
     $scope.dynamicTooltipText = 'Dynamic';
     $scope.dynamicPopover = 'Hello, World!';
     $scope.dynamicPopoverTitle = 'Title';
@@ -186,13 +186,13 @@ angular
         },
       },
       grid: {
-        tickColor: "#f0f0f0",
+        tickColor: '#f0f0f0',
         borderWidth: 1,
         borderColor: 'f0f0f0',
         color: '#6a6c6f'
       },
       // 设置曲线的两种颜色
-      colors: ["#62cb31", "#91D473"],
+      colors: ['#62cb31', '#91D473'],
     };
 
 
@@ -203,45 +203,45 @@ angular
     $scope.PieChart = {
       data: [1, 5],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
 
     $scope.PieChart2 = {
       data: [226, 360],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
     $scope.PieChart3 = {
       data: [0.52, 1.561],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
     $scope.PieChart4 = {
       data: [1, 4],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
     $scope.PieChart5 = {
       data: [226, 134],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
     $scope.PieChart6 = {
       data: [0.52, 1.041],
       options: {
-        fill: ["#62cb31", "#edf0f5"]
+        fill: ['#62cb31', '#edf0f5']
       }
     };
 
     $scope.BarChart = {
       data: [5, 3, 9, 6, 5, 9, 7, 3, 5, 2],
       options: {
-        fill: ["#dbdbdb", "#62cb31"],
+        fill: ['#dbdbdb', '#62cb31'],
       }
     };
 
@@ -266,11 +266,11 @@ angular
 
     };
 
-    // // 注销
-    // $scope.logout = function () {
-    //   UserServer.logout(function(){
-    //     $location.path(config.loginPath);
-    //   });
-    // };
+    // 注销
+    $scope.logout = function () {
+      UserService.logout(function(){
+        $location.path(config.loginPath);
+      });
+    };
 
   }]);
