@@ -21,7 +21,6 @@ angular.module('webappApp')
           $scope.form.$submitted = false;
         } else if (status === 200) {
           // 登录成功，先清空缓存，然后跳转.自动跳转
-          // todo 菜单初始化
           WebAppMenuService.init();
           $location.path(config.mainPath);
         } else {

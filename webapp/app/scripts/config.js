@@ -62,10 +62,26 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
     // 角色管理
     .state('system.role', {
       url: '/role',
-      templateUrl: 'views/role/rolefile/index.html',
+      templateUrl: 'views/system/role/index.html',
       data: {
         pageTitle: '角色管理',
         pageDesc: '计量系统角色管理'
+      },
+      controller: 'SystemRoleIndexCtrl'
+    })
+
+    .state('system.roleEdit', {
+      url: '/role/edit',
+      templateUrl: 'views/system/role/edit.html',
+      data: {
+        pageTitle: '角色管理——编辑',
+        pageDesc: '计量系统角色管理'
+      },
+      controller: 'SystemRoleEditCtrl',
+      params: {
+        data: { // 角色对象
+          value: {}
+        }
       }
     })
 
