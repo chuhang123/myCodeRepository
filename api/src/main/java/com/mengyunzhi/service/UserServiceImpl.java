@@ -49,6 +49,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void updatePasswordAndNameOfCurrentUser(User user) {
+        User currentUser = this.getCurrentLoginUser();
+
+        if (!currentUser.getPassword().equals(user.getPassword())) {
+            throw new SecurityException("原密码错误");
+        }
+
+        currentUser.setName(user.getName());
+        currentUser.setPassword(user.getRePassword());
+        userRepository.save(currentUser);
+
+        return;
+    }
+
+    @Override
     public User get(Long id) {
         return userRepository.findOne(id);
     }

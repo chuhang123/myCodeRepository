@@ -5,11 +5,9 @@ import com.mengyunzhi.repository.User;
 import com.mengyunzhi.repository.WebAppMenu;
 import com.mengyunzhi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.security.Principal;
 import java.util.List;
 import java.util.logging.Logger;
@@ -42,6 +40,19 @@ public class UserController {
     @GetMapping("/getCurrentUserWebAppMenus/")
     public List<WebAppMenu> getCurrentUserWebAppMenus() {
         return userService.getCurrentUserWebAppMenus();
+    }
+
+    @PutMapping(value = "/updatePasswordAndNameOfCurrentUser/")
+    public void updatePasswordAndNameOfCurrentUser(@RequestBody User user,
+                                                   HttpServletResponse response) {
+        try {
+            userService.updatePasswordAndNameOfCurrentUser(user);
+            response.setStatus(204);
+        } catch (SecurityException e) {
+            response.setStatus(205);
+        }
+
+        return;
     }
 
 }

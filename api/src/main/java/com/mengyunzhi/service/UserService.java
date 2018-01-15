@@ -19,4 +19,6 @@ public interface UserService {
 
     // 获取当前用户的前台菜单列表
     List<WebAppMenu> getCurrentUserWebAppMenus();
+
+    void updatePasswordAndNameOfCurrentUser(User user);
 }

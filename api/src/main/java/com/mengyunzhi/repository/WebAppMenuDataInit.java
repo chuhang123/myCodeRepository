@@ -100,7 +100,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         personalCenterMenu.setName("个人中心");
         personalCenterMenu.setWeight(weight++);
         personalCenterMenu.setDescription("个人中心");
-        personalCenterMenu.setRouteName("Personal");
+        personalCenterMenu.setRouteName("system.Personal");
         webAppMenus.add(personalCenterMenu);
     }
 

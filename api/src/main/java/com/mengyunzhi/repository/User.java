@@ -48,6 +48,15 @@ public class User implements Serializable {
     @Transient		//该字段并不存在数据表中
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String rePassword;
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     //@ApiModelProperty(value = "对应的角色列表", notes = "参考:<<Hibernate 实战>> P172")
     @ManyToMany

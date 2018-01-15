@@ -48,6 +48,7 @@ public class UserDataInit extends ApiInitDataListener {
             user1.setUsername("user1");
             user1.setPassword("user1");
             user1.setName("测试器具用户");
+            user1.setPhone("13752603780");
             user1.setStatus(0);
             userRepository.save(user1);
 

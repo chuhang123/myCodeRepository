@@ -96,13 +96,14 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
     })
 
     //个人中心
-    .state('Personal', {
-        // 路由值
-        url: '/Personal',
-        templateUrl: 'views/common/content.html',
-        data: {
-          pageTitle: '个人中心'
-        }
+    .state('system.Personal', {
+      // 路由值
+      url: '/Personal',
+      templateUrl: 'views/personal.html',
+      data: {
+        pageTitle: '个人中心'
+      },
+      controller: 'PersonalCtrl'
     });
 }
 
@@ -128,10 +129,10 @@ angular
     defaultRoute: '/main/dashboard' // 默认路由
   })
   // 注入$http完成对URL请求的统一设置
-  .factory('apiUrlHttpInterceptor', function($cookies, config, $q, $location) {
+  .factory('apiUrlHttpInterceptor', function ($cookies, config, $q, $location) {
     // 定义API接口地址
-    var apiUrl = config.apiUrl;
-    var shouldPrependApiUrl = function(reqConfig) {
+    var apiUrl               = config.apiUrl;
+    var shouldPrependApiUrl  = function (reqConfig) {
       if (!apiUrl) {
         return false;
       }
@@ -140,13 +141,13 @@ angular
         (reqConfig.url && reqConfig.url.indexOf(apiUrl) === 0));
     };
     // 获取cookies过期时间
-    var getCookiesExpireDate = function() {
+    var getCookiesExpireDate = function () {
       var now = new Date();
       now.setTime(now.getTime() + config.cookiesExpiresTime);
       return now;
     };
     // 是否应该将xAuthToken添加到header信息中
-    var shouldAddXAuthToken = function(reqConfig) {
+    var shouldAddXAuthToken  = function (reqConfig) {
       // 如果为用户认证，或是已经带有x-auth-token进行提交，则返回 false
       if (reqConfig.headers.authorization || reqConfig.headers[config.xAuthTokenName]) {
         return false;
@@ -155,7 +156,7 @@ angular
       }
     };
     return {
-      request: function(reqConfig) {
+      request: function (reqConfig) {
         // 如果请求不以 .json|html|js|css 结尾，则进行请求url的改写
         if (apiUrl && shouldPrependApiUrl(reqConfig)) {
           reqConfig.url = apiUrl + reqConfig.url;
@@ -170,7 +171,7 @@ angular
         return reqConfig;
       },
       // 响应失败
-      responseError: function(rejection) {
+      responseError: function (rejection) {
         if (rejection.status === 401) {
           // 错误码为401，则跳转到登录界面
           $location.path(config.loginPath);
@@ -182,17 +183,17 @@ angular
     };
   })
   // $http 注入，当发生请求时，自动添加前缀
-  .config(['$httpProvider', function($httpProvider) {
+  .config(['$httpProvider', function ($httpProvider) {
     $httpProvider.interceptors.push('apiUrlHttpInterceptor');
   }])
-  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+  .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-yz-bar"><div class="loading"><div class="table-cell"><div class="loading-main"><img src="styles/svg/loading-bars.svg" width="256" height="64"><p>正在努力为您加载...</p></div></div></div></div>';
     // cfpLoadingBarProvider.spinnerTemplate = '';
   }])
   .config(configState)
-  .run(function($rootScope, $state, UserService, $location, config) {
+  .run(function ($rootScope, $state, UserService, $location, config) {
     // 检测当前用户状态，
-    UserService.checkUserIsLogin(function(status) {
+    UserService.checkUserIsLogin(function (status) {
       if (status === true) {
         // 已登录, 注册路由
       } else {
