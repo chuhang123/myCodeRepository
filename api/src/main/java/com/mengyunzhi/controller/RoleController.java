@@ -5,9 +5,7 @@ import com.mengyunzhi.repository.Role;
 import com.mengyunzhi.service.RoleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,10 @@ public class RoleController {
     @GetMapping("/getAll")
     public List<Role> getAll() {
         return roleService.getAll();
+    }
+
+    @PutMapping("/{id}")
+    public Role get(@PathVariable Long id, @RequestBody Role role) {
+        return roleService.update(id, role);
     }
 }

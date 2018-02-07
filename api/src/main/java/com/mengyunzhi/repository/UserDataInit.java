@@ -29,6 +29,8 @@ public class UserDataInit extends ApiInitDataListener {
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         if (null == userRepository.findOneByUsername("admin")) {
             User adminUser = new User();
+            Role role = roleRepository.findOneByName("系统管理员");
+            adminUser.addRole(role);
             adminUser.setName("系统管理员");
             adminUser.setStatus(0);
             adminUser.setPinyin("xitongguanliyuan");
@@ -36,15 +38,11 @@ public class UserDataInit extends ApiInitDataListener {
             adminUser.setPassword("admin");
             userRepository.save(adminUser);
 
-            Role adminRole = roleRepository.findOneByName("系统管理员");
-            Set<Role> roles = new HashSet<>();
-            roles.add(adminRole);
-            adminUser.setRoles(roles);
-
             logger.info("为测试器具用户添加一个用户");
-            Role role = roleRepository.findOneByIsAdmin(true);
+
             User user1 = new User();
-            user1.addRole(role);
+            Role user1Role = roleRepository.findOneByName("器具用户");
+            user1.addRole(user1Role);
             user1.setUsername("user1");
             user1.setPassword("user1");
             user1.setName("测试器具用户");
