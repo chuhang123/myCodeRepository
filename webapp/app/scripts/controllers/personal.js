@@ -32,15 +32,15 @@ angular.module('webappApp')
                 password: $scope.password,
                 rePassword: $scope.confirmPassword
             };
-            //更新用户姓名和密码
+            // 更新用户姓名和密码
             UserService.updatePasswordAndNameOfCurrentUser(self.userPasswordAndName, function (status) {
 
                 if (204 === status) {
-                    //更新成功
-                    //传入空回调函数，因为如果用户直接访问的个人中心，则报错
+                    // 更新成功
+                    // 传入空回调函数，因为如果用户直接访问的个人中心，则报错
                     CommonService.success('操作成功', '', function () {});
                 } else if (205 === status) {
-                    //原密码错误
+                    // 原密码错误
                     self.setMessage('对不起', '您的原密码输入有误，请重新输入');
                 } else {
                     self.setMessage('对不起', '系统或网络异常，请稍后再试');

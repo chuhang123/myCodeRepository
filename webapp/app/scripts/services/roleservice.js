@@ -25,14 +25,14 @@ angular.module('webappApp')
       // 便历被点击的菜单，添加到menus中
       $scope.data.webAppMenus = [];
       self.getCheckedMenus($scope.datas, $scope.data.webAppMenus);
-      console.log($scope.data.id);
+      console.log($scope.data);
       // 调用$http进行数据传输
       $http.put('/Role/' + $scope.data.id, $scope.data).then(function successCallback(response) {
         if (callback) {
           callback(response);
         }
       }, function errorCallback() {
-
+          console.log('error');
       });
     };
 
