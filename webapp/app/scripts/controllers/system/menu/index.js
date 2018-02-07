@@ -11,8 +11,7 @@ angular.module('webappApp')
     .controller('SystemMenuIndexCtrl', function ($scope, WebAppMenuService) {
         var self = this;
 
-        // 定义显示方法
-        var showData = function () {
+        self.init = function () {
             // 获取后台数据
             WebAppMenuService.getMenuTree(function (data) {
                 $scope.datas = [];
@@ -27,10 +26,8 @@ angular.module('webappApp')
             });
         };
 
-        // 执行获取数据
-        showData();
+        self.init();
 
-        // 统一暴露
         $scope.getFullName = WebAppMenuService.getFullName;
         $scope.getRoute    = WebAppMenuService.getRouteFromMenu;
         $scope.getUrl      = WebAppMenuService.getFullUrl;
