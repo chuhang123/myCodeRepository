@@ -38,6 +38,8 @@ module.exports = function(config) {
       'bower_components/slimScroll/jquery.slimscroll.js',
       'bower_components/slimScroll/jquery.slimscroll.min.js',
       'bower_components/iCheck/icheck.min.js',
+      'bower_components/sweetalert/lib/sweet-alert.js',
+      'bower_components/angular-ui-select/dist/select.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

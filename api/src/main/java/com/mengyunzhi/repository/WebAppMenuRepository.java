@@ -1,5 +1,6 @@
 package com.mengyunzhi.repository;
 
+import com.mengyunzhi.entity.WebAppMenu;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

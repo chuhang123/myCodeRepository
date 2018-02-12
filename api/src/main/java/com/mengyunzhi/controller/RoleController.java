@@ -1,7 +1,6 @@
 package com.mengyunzhi.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.mengyunzhi.repository.Role;
+import com.mengyunzhi.entity.Role;
 import com.mengyunzhi.service.RoleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

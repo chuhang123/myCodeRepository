@@ -1,6 +1,6 @@
 package com.mengyunzhi.security;
 
-import com.mengyunzhi.repository.User;
+import com.mengyunzhi.entity.User;
 import com.mengyunzhi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

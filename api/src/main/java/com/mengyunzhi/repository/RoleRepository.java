@@ -1,5 +1,6 @@
 package com.mengyunzhi.repository;
 
+import com.mengyunzhi.entity.Role;
 import org.springframework.data.repository.CrudRepository;
 
 /**

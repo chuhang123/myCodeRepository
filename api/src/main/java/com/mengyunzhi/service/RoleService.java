@@ -1,6 +1,6 @@
 package com.mengyunzhi.service;
 
-import com.mengyunzhi.repository.Role;
+import com.mengyunzhi.entity.Role;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

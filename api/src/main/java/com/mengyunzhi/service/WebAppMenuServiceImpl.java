@@ -1,6 +1,6 @@
 package com.mengyunzhi.service;
 
-import com.mengyunzhi.repository.WebAppMenu;
+import com.mengyunzhi.entity.WebAppMenu;
 import com.mengyunzhi.repository.WebAppMenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;

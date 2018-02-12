@@ -1,6 +1,6 @@
 package com.mengyunzhi.service;
 
-import com.mengyunzhi.repository.Role;
+import com.mengyunzhi.entity.Role;
 import com.mengyunzhi.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

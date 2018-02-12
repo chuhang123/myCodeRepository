@@ -1,8 +1,7 @@
 package com.mengyunzhi.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.mengyunzhi.repository.User;
-import com.mengyunzhi.repository.WebAppMenu;
+import com.mengyunzhi.entity.User;
+import com.mengyunzhi.entity.WebAppMenu;
 import com.mengyunzhi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.mengyunzhi.service;
 
-import com.mengyunzhi.repository.WebAppMenu;
+import com.mengyunzhi.entity.WebAppMenu;
 
 import java.util.List;
 

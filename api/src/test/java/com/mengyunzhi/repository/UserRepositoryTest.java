@@ -1,5 +1,6 @@
 package com.mengyunzhi.repository;
 
+import com.mengyunzhi.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

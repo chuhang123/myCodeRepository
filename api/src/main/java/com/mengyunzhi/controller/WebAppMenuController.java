@@ -1,6 +1,6 @@
 package com.mengyunzhi.controller;
 
-import com.mengyunzhi.repository.WebAppMenu;
+import com.mengyunzhi.entity.WebAppMenu;
 import com.mengyunzhi.service.WebAppMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,5 +1,8 @@
 package com.mengyunzhi.service;
 
+import com.mengyunzhi.entity.Role;
+import com.mengyunzhi.entity.User;
+import com.mengyunzhi.entity.WebAppMenu;
 import com.mengyunzhi.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
