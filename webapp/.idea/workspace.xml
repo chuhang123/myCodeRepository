@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c808ea9c-9610-4ab4-ae94-20223e7f2500" name="Default" comment="完成前台菜单信息.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/system/standardInstrumentType/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/Menu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/Role.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/RoleDataInit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/UserDataInit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/WebAppMenu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/WebAppMenuDataInit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/RoleDataInit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/UserDataInit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/WebAppMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/WebAppMenuDataInit.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/RoleController.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/UserController.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/WebAppMenuController.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/WebAppMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/MenuRepository.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/MenuRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/RoleRepository.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/RoleRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/UserRepository.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/WebAppMenuRepository.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/repository/WebAppMenuRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/security/CustomerUserDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/security/CustomerUserDetailsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/RoleService.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/RoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/RoleServiceImpl.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/RoleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/UserService.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/WebAppMenuService.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/WebAppMenuService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/WebAppMenuServiceImpl.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/service/WebAppMenuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/test-classes/com/mengyunzhi/repository/UserRepositoryTest.class" afterPath="$PROJECT_DIR$/../api/target/test-classes/com/mengyunzhi/repository/UserRepositoryTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../api/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/RoleController.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/RoleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/UserController.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/WebAppMenuController.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/WebAppMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/MenuRepository.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/MenuRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/RoleRepository.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/RoleRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/UserRepository.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/WebAppMenuRepository.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/repository/WebAppMenuRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/security/CustomerUserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/security/CustomerUserDetailsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/RoleService.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/RoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/RoleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/UserService.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/WebAppMenuService.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/WebAppMenuService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/WebAppMenuServiceImpl.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/service/WebAppMenuServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/test/java/com/mengyunzhi/repository/UserRepositoryTest.java" afterPath="$PROJECT_DIR$/../api/src/test/java/com/mengyunzhi/repository/UserRepositoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/header.html" afterPath="$PROJECT_DIR$/app/views/common/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.html" afterPath="$PROJECT_DIR$/app/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/karma.conf.js" afterPath="$PROJECT_DIR$/test/karma.conf.js" />
-    </list>
+    <list default="true" id="c808ea9c-9610-4ab4-ae94-20223e7f2500" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -150,8 +95,8 @@
       <file leaf-file-name="bower.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="87">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -536,7 +481,7 @@
       <workItem from="1513123947969" duration="506000" />
       <workItem from="1518264079371" duration="1350000" />
       <workItem from="1518266045045" duration="7000" />
-      <workItem from="1518403073037" duration="12397000" />
+      <workItem from="1518403073037" duration="12628000" />
     </task>
     <task id="LOCAL-00001" summary="允许跨域请求">
       <created>1512110106155</created>
@@ -573,11 +518,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512961059355</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成标准器管理的后台相关方法,完成前台标准器管理的index界面">
+      <created>1518437156246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518437156246</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102171000" />
+    <option name="totallyTimeSpent" value="102402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -650,7 +602,8 @@
     <MESSAGE value="允许跨域请求" />
     <MESSAGE value="增加ui.bootstrap" />
     <MESSAGE value="完成前台菜单信息." />
-    <option name="LAST_COMMIT_MESSAGE" value="完成前台菜单信息." />
+    <MESSAGE value="完成标准器管理的后台相关方法,完成前台标准器管理的index界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成标准器管理的后台相关方法,完成前台标准器管理的index界面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1054,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="87">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
