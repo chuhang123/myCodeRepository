@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c808ea9c-9610-4ab4-ae94-20223e7f2500" name="Default" comment="完成标准器管理的后台相关方法,完成前台标准器管理的index界面">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/directive/yunzhiAccuracyDisplayName.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/directive/yunzhiInstrumentTypeFirstLevel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/system/standardInstrumentType/add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/system/standardInstrumentType/addEntity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/config/WebConfig.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/config/WebConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/StandardDeviceInstrumentTypeController.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/controller/StandardDeviceInstrumentTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/Accuracy.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/Accuracy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/InstrumentFirstLevelType.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/InstrumentFirstLevelType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/InstrumentType.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/InstrumentType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/MeasureScale.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/MeasureScale.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/Specification.class" afterPath="$PROJECT_DIR$/../api/target/classes/com/mengyunzhi/entity/Specification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../api/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/config/WebConfig.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/config/WebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/StandardDeviceInstrumentTypeController.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/controller/StandardDeviceInstrumentTypeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/Accuracy.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/Accuracy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/InstrumentFirstLevelType.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/InstrumentFirstLevelType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/InstrumentType.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/InstrumentType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/MeasureScale.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/MeasureScale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/Specification.java" afterPath="$PROJECT_DIR$/../api/src/main/java/com/mengyunzhi/entity/Specification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../api/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/target/classes/application.properties" afterPath="$PROJECT_DIR$/../api/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/system/standardinstrumenttype/index.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/system/standardinstrumenttype/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/standardDeviceInstrumentTypeService.js" afterPath="$PROJECT_DIR$/app/scripts/services/standardDeviceInstrumentTypeService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/system/standardInstrumentType/index.html" afterPath="$PROJECT_DIR$/app/views/system/standardInstrumentType/index.html" />
-    </list>
+    <list default="true" id="c808ea9c-9610-4ab4-ae94-20223e7f2500" name="Default" comment="完成标准器管理的后台相关方法,完成前台标准器管理的index界面" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -492,7 +464,7 @@
       <workItem from="1518403073037" duration="13927000" />
       <workItem from="1519345944674" duration="15084000" />
       <workItem from="1519459492218" duration="11189000" />
-      <workItem from="1519539020086" duration="2383000" />
+      <workItem from="1519539020086" duration="2473000" />
     </task>
     <task id="LOCAL-00001" summary="允许跨域请求">
       <created>1512110106155</created>
@@ -540,7 +512,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132357000" />
+    <option name="totallyTimeSpent" value="132447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,7 +525,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25075528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -564,7 +535,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978328" sideWeight="0.49781898" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3978328" sideWeight="0.49781898" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
