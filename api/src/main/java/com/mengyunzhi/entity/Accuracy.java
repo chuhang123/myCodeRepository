@@ -2,6 +2,7 @@ package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -28,6 +29,7 @@ public class Accuracy implements Serializable {
 
     //@ApiModelProperty("二级类别(n:1)")
     @ManyToOne
+    @JsonView({NoneJsonView.class})
     private InstrumentType instrumentType;
 
     //@ApiModelProperty("权重")

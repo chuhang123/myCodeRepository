@@ -1,6 +1,8 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
+import com.mengyunzhi.jsonView.StandardDeviceInstrumentTypeJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -33,6 +35,8 @@ public class InstrumentType implements Serializable {
 
     //@ApiModelProperty("器具一级类别")
     @ManyToOne
+    @JsonView({NoneJsonView.class,
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
     private InstrumentFirstLevelType instrumentFirstLevelType;
 
     //@ApiModelProperty("等级准确度示值偏差显示名称")
@@ -42,6 +46,8 @@ public class InstrumentType implements Serializable {
     // 参照hibernate实战第七章第三节级联状态
     @OneToMany(mappedBy = "instrumentType", cascade = {CascadeType.REFRESH, CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}, orphanRemoval = true)
     //@ApiModelProperty("oneToMany 规格型号")
+    @JsonView({NoneJsonView.class,
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
     private Set<Specification> specifications = new HashSet<>();
 
     @ManyToMany
@@ -50,14 +56,20 @@ public class InstrumentType implements Serializable {
             name = "instrument_type_purposes",
             joinColumns = @JoinColumn(name = "instrument_type_id"),
             inverseJoinColumns = @JoinColumn(name = "purpose_id"))
+    @JsonView({NoneJsonView.class,
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
     private Set<Purpose> purposes = new HashSet<>();
 
     //@ApiModelProperty("oneToMany精度")
     @OneToMany(mappedBy = "instrumentType", cascade = {CascadeType.ALL})
+    @JsonView({NoneJsonView.class,
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
     private Set<Accuracy> accuracies = new HashSet<>();
 
     //@ApiModelProperty("测量范围 @ManyToMany")
     @OneToMany(mappedBy = "instrumentType", cascade = {CascadeType.ALL})
+    @JsonView({NoneJsonView.class,
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
     private Set<MeasureScale> measureScales = new HashSet<>();
 
     public InstrumentType() {

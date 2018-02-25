@@ -1,6 +1,7 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;

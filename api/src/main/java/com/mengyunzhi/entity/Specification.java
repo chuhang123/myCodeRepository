@@ -1,6 +1,8 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -34,6 +36,7 @@ public class Specification implements Serializable {
     //@ApiModelProperty("器具类别")
     @ManyToOne
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonView({NoneJsonView.class})
     private InstrumentType instrumentType;
     //@ApiModelProperty("权重")
     private int weight = 0;

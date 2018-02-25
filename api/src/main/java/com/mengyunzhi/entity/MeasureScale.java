@@ -1,6 +1,7 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -31,11 +32,13 @@ public class MeasureScale implements Serializable {
     private User createUser;
 
     @ManyToOne
+    @JsonView({NoneJsonView.class})
     //@ApiModelProperty("二级器具类别(n : 1)")
     private InstrumentType instrumentType;
 
     //@ApiModelProperty("一级类别")
     @ManyToOne
+    @JsonView({NoneJsonView.class})
     private InstrumentFirstLevelType instrumentFirstLevelType;
 
     //@ApiModelProperty("权重")

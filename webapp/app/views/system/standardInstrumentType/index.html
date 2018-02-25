@@ -7,9 +7,6 @@
                     <div class="col-sm-5">
                         <yunzhi-discipline ng-model="params.discipline"></yunzhi-discipline>
                     </div>
-                    <div class="col-sm-3">
-                        <a ui-sref="system.instrumentTypeFirstLevel({disciplineId: params.discipline.id})"><button type="button" class="btn btn-sm btn-primary"><i class="fa fa-gears"></i>&nbsp;管理一级分类</button></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -18,7 +15,7 @@
         <div class="col-lg-12">
             <div class="row">
                 <div class="col-xs-2 col-xs-offset-10">
-                    <a ui-sref="system.instrumentTypeAdd({disciplineId: discipline.id, config:{type:config.type}})"><button class="btn btn-info btn-sm" type="button"><i class="fa fa-plus">&nbsp;&nbsp;新增</i></button></a>
+                    <a ui-sref="system.standardInstrumentTypeAdd({disciplineId: params.discipline.id})"><button class="btn btn-info btn-sm" type="button"><i class="fa fa-plus">&nbsp;&nbsp;新增</i></button></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -47,7 +44,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="(key, object) in data.content">
+                        <tr ng-repeat="(key, object) in data.content" ng-hide="object.hide">
                             <td style="word-wrap: break-word">{{object.name}}</td>
                             <td style="word-wrap: break-word">{{object.instrumentFirstLevelType.name}}</td>
                             <td style="word-wrap: break-word">{{object.accuracyDisplayName.name}}</td>
@@ -56,8 +53,8 @@
                             <td style="word-wrap: break-word"><span ng-repeat="specification in object.specifications">{{specification.value}}&nbsp;&nbsp;</span></td>
                             <td style="word-wrap: break-word"><span ng-repeat="purpose in object.purposes">{{purpose.name}}&nbsp;&nbsp;</span></td>
                             <td style="word-wrap: break-word">
-                                <yunzhi-access data-reload="reloadByPage" data-route="system.instrumentType"><a ui-sref="system.instrumentTypeEdit({id: object.id, config:{type: config.type}})" class="btn btn-info btn-xs"><i class="fa fa-paste"></i>&nbsp;编辑</a></yunzhi-access>&nbsp;&nbsp;
-                                <a class="btn btn-danger btn-xs" ng-click="delete($index, object.id)"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                                <yunzhi-access data-reload="reloadByPage" data-route="system.instrumentType"><a ui-sref="system.standardInstrumentTypeEdit({id: object.id})" class="btn btn-info btn-xs"><i class="fa fa-paste"></i>&nbsp;编辑</a></yunzhi-access>&nbsp;&nbsp;
+                                <a class="btn btn-danger btn-xs" ng-click="delete(object)"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
                             </td>
                         </tr>
                         </tbody>

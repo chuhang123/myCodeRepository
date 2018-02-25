@@ -105,6 +105,36 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
             controller: 'SystemStandardinstrumenttypeIndexCtrl'
         })
 
+        .state('system.standardInstrumentTypeAdd', {
+            url: '/standardInstrumentType/Add',
+            templateUrl: 'views/system/standardInstrumentType/add.html',
+            data: {
+                pageTitle: '标准器类别管理',
+                pageDesc: '计量系统角色管理'
+            },
+            params: {
+                disciplineId: {
+                    value: ''
+                }
+            },
+            controller: 'SystemStandardinstrumenttypeAddCtrl'
+        })
+
+        .state('system.standardInstrumentTypeEdit', {
+            url: '/standardInstrumentType/edit/:id',
+            templateUrl: 'views/system/standardInstrumentType/add.html',
+            data: {
+                pageTitle: '标准器类别管理',
+                pageDesc: '计量系统角色管理'
+            },
+            params: {
+                id: {
+                    value: ''
+                }
+            },
+            controller: 'SystemStandardinstrumenttypeEditCtrl'
+        })
+
         //个人中心
         .state('system.Personal', {
             // 路由值
