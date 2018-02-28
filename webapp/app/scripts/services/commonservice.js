@@ -114,7 +114,9 @@ angular.module('webappApp')
 
         // 返回上一个链接
         self.back = function () {
+            console.log(2)
             if (self.showBack() === true) {
+                console.log(1)
                 self.states.pop();
                 var state   = self.states[self.states.length - 1];
                 self.isBack = true;
@@ -128,6 +130,7 @@ angular.module('webappApp')
          * @author：panjie
          */
         self.showBack = function () {
+            console.log(self.states.length)
             if (self.states.length > 1) {
                 return true;
             } else {

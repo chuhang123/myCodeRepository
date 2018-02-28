@@ -70,5 +70,6 @@ angular.module('webappApp')
                     self.addPleaseChooseObject();
                 });
             }
+
         };
     });

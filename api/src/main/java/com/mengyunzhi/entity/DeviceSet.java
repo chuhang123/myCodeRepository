@@ -1,6 +1,7 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -27,6 +28,7 @@ public class DeviceSet implements Serializable {
             mappedBy = "deviceSet",
             cascade = CascadeType.REMOVE)
     //@ApiModelProperty("对应的装置授权检定项目")
+    @JsonView({NoneJsonView.class})
     private Set<DeviceInstrument> deviceInstruments = new HashSet<DeviceInstrument>();
 
     //@ApiModelProperty("名称")

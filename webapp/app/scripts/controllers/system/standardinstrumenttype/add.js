@@ -10,13 +10,13 @@
 angular.module('webappApp')
   .controller('SystemStandardinstrumenttypeAddCtrl', function ($scope, $uibModal, $state, AccuracyService, CommonService,
                                                                InstrumentTypeService, PurposeService, $stateParams,
-                                                               standardDeviceInstrumentType) {
+                                                               StandardDeviceInstrumentTypeService) {
       var self = this;
 
       // 为新增界面时，初始化的代码
       self.init = (function () {
           // 初始化
-          standardDeviceInstrumentType.addAndEditInit(self, $scope);
+          StandardDeviceInstrumentTypeService.addAndEditInit(self, $scope);
           self.disciplineId = parseInt($stateParams.disciplineId ? $stateParams.disciplineId : 0); // 学科类别id
           $scope.showExtendInfo = true;          // 显示扩展信息
           $scope.data = {};

@@ -87,7 +87,7 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
 
         // 标准器类别管理
         .state('system.standardInstrumentType', {
-            url: '/standardInstrumentType',
+            url: '/standardInstrumentType/page/:page/size/:size',
             templateUrl: 'views/system/standardInstrumentType/index.html',
             data: {
                 pageTitle: '标准器类别管理',
@@ -99,17 +99,17 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
                     value: '0'
                 },
                 size: {
-                    value: config.size
+                    value: config.size.toString()
                 }
             },
             controller: 'SystemStandardinstrumenttypeIndexCtrl'
         })
 
         .state('system.standardInstrumentTypeAdd', {
-            url: '/standardInstrumentType/Add',
+            url: '/standardInstrumentType/add',
             templateUrl: 'views/system/standardInstrumentType/add.html',
             data: {
-                pageTitle: '标准器类别管理',
+                pageTitle: '标准器类别管理--新增',
                 pageDesc: '计量系统角色管理'
             },
             params: {
@@ -124,7 +124,7 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
             url: '/standardInstrumentType/edit/:id',
             templateUrl: 'views/system/standardInstrumentType/add.html',
             data: {
-                pageTitle: '标准器类别管理',
+                pageTitle: '标准器类别管理--编辑',
                 pageDesc: '计量系统角色管理'
             },
             params: {
@@ -133,6 +133,170 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider, confi
                 }
             },
             controller: 'SystemStandardinstrumenttypeEditCtrl'
+        })
+
+        // 标准装置管理
+        .state('standard', {
+            // 路由值
+            abstract: true, // 表示此路由不对应具体的页面
+            url: '/standard',
+            templateUrl: 'views/common/content.html', // 模板文件
+            data: {
+                pageTitle: '标准装置管理'
+            }
+        })
+
+        // 档案管理
+        .state('standard.deviceSet', {
+            url: '/deviceSet/page/:page/size/:size',
+            templateUrl: 'views/standard/deviceset/index.html',
+            data: {
+                pageTitle: '档案管理',
+                pageDesc: '标准装置--档案管理'
+            },
+            params: {
+                page: {
+                    value: '0'
+                },
+                size: {
+                    value: config.size.toString()
+                }
+            },
+            controller: 'StandardDeviceSetIndexCtrl'
+        })
+
+        .state('standard.deviceSetAdd', {
+            url: '/deviceSet/add',
+            templateUrl: 'views/standard/deviceset/add.html',
+            data: {
+                pageTitle: '档案管理--新增',
+                pageDesc: '标准装置--档案管理'
+            },
+            controller: 'StandardDeviceSetAddCtrl'
+        })
+
+        .state('standard.deviceSetEdit', {
+            url: '/deviceSet/edit/:id',
+            templateUrl: 'views/standard/deviceset/add.html',
+            data: {
+                pageTitle: '档案管理--编辑',
+                pageDesc: '标准装置--档案管理'
+            },
+            params: {
+                id: {
+                    value: ''
+                }
+            },
+            controller: 'StandardDeviceSetEditCtrl'
+        })
+
+        // 标准器信息
+        .state('standard.standardDevice', {
+            url: '/standardDevice/deviceSetId/:deviceSetId',
+            templateUrl: 'views/standard/standarddevice/index.html',
+            data: {
+                pageTitle: '标准器管理',
+                pageDesc: '标准装置--标准器管理'
+            },
+            params: {
+                deviceSetId: {
+                    value: ''
+                },
+                page: {
+                    value: '0'
+                },
+                size: {
+                    value: config.size.toString()
+                }
+            },
+            controller: 'StandardStandardDeviceIndexCtrl'
+        })
+
+        .state('standard.standardDeviceAdd', {
+            url: '/standardDevice/deviceSetId/:deviceSetId/add',
+            templateUrl: 'views/standard/standarddevice/add.html',
+            data: {
+                pageTitle: '标准器管理--新增',
+                pageDesc: '标准装置--标准器管理'
+            },
+            params: {
+                deviceSetId: {
+                    value: ''
+                }
+            },
+            controller: 'StandardStandardDeviceAddCtrl'
+        })
+
+        .state('standard.standardDeviceEdit', {
+            url: '/standardDevice/edit/:id',
+            templateUrl: 'views/standard/standarddevice/edit.html',
+            data: {
+                pageTitle: '标准器管理--编辑',
+                pageDesc: '标准装置--标准器管理'
+            },
+            params: {
+                id: {
+                    value: ''
+                }
+            },
+            controller: 'StandardStandardDeviceEditCtrl'
+        })
+
+        // 授权检定项目管理
+        .state('standard.deviceInstrument', {
+            url: '/deviceInstrument',
+            templateUrl: 'views/standard/deviceinstrument/index.html',
+            data: {
+                pageTitle: '授权检定项目管理--新增',
+                pageDesc: '标准装置--授权检定项目管理'
+            },
+            params: {
+                deviceSetId: {
+                    value: ''
+                }
+            },
+            controller: 'StandardDeviceInstrumentIndexCtrl'
+        })
+
+        // 授权检定项目管理
+        .state('standard.deviceInstrumentAdd', {
+            url: '/deviceInstrument/deviceSetId/:deviceSetId/add',
+            templateUrl: 'views/standard/deviceinstrument/add.html',
+            data: {
+                pageTitle: '授权检定项目管理',
+                pageDesc: '标准装置--授权检定项目管理'
+            },
+            params: {
+                deviceSetId: {
+                    value: ''
+                }
+            },
+            controller: 'StandardDeviceInstrumentAddCtrl'
+        })
+
+        // 综合查询
+        .state('standard.integratedQuery', {
+            url: '/integratedQuery/page/:page/size/:size',
+            templateUrl: 'views/standard/integratedquery/index.html',
+            data: {
+                pageTitle: '综合查询',
+                pageDesc: '标准装置--综合查询'
+            },
+            params: {
+                page: {
+                    value: '0'
+                },
+                size: {
+                    value: config.size.toString()
+                },
+                code: {
+                    value: ''
+                },
+                name: {
+                    value: ''
+                }
+            },
+            controller: 'StandardIntegratedQueryIndexCtrl'
         })
 
         //个人中心

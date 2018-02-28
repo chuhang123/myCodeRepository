@@ -5,5 +5,4 @@ package com.mengyunzhi.jsonView;
  */
 public class StandardDeviceInstrumentTypeJsonView {
     public interface baseJsonView{}
-    public interface pageByDisciplineId{}
 }

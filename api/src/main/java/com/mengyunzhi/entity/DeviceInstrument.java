@@ -1,6 +1,8 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.DeviceInstrumentJsonView;
+import com.mengyunzhi.jsonView.NoneJsonView;
 import org.hibernate.annotations.Immutable;
 
 import javax.persistence.*;
@@ -26,17 +28,21 @@ public class DeviceInstrument implements Serializable {
 
     @ManyToOne
     //@ApiModelProperty("计量标准装置")
+    @JsonView({NoneJsonView.class, DeviceInstrumentJsonView.baseJsonView.class})
     private DeviceSet deviceSet;
 
     @ManyToOne
     //@ApiModelProperty("对应的最小测量范围")        //关联测量范围
+    @JsonView({NoneJsonView.class, DeviceInstrumentJsonView.baseJsonView.class})
     private MeasureScale minMeasureScale;
 
     @ManyToOne
     //@ApiModelProperty("对应的最大测量范围")        //关联测量范围
+    @JsonView({NoneJsonView.class, DeviceInstrumentJsonView.baseJsonView.class})
     private MeasureScale maxMeasureScale;
 
     @ManyToOne
+    @JsonView({NoneJsonView.class, DeviceInstrumentJsonView.baseJsonView.class})
     //@ApiModelProperty("对应的精度")         //关联精度
     private Accuracy accuracy;
 

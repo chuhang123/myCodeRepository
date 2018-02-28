@@ -1,8 +1,10 @@
 package com.mengyunzhi.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.mengyunzhi.jsonView.DeviceInstrumentJsonView;
 import com.mengyunzhi.jsonView.NoneJsonView;
 import com.mengyunzhi.jsonView.StandardDeviceInstrumentTypeJsonView;
+import com.mengyunzhi.jsonView.StandardDeviceJsonView;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -36,7 +38,9 @@ public class InstrumentType implements Serializable {
     //@ApiModelProperty("器具一级类别")
     @ManyToOne
     @JsonView({NoneJsonView.class,
-            StandardDeviceInstrumentTypeJsonView.baseJsonView.class})
+            StandardDeviceInstrumentTypeJsonView.baseJsonView.class,
+            DeviceInstrumentJsonView.baseJsonView.class,
+            StandardDeviceJsonView.baseJsonView.class})
     private InstrumentFirstLevelType instrumentFirstLevelType;
 
     //@ApiModelProperty("等级准确度示值偏差显示名称")

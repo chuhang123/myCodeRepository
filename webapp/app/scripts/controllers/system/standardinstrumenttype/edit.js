@@ -8,12 +8,12 @@
  * Controller of the webappApp
  */
 angular.module('webappApp')
-    .controller('SystemStandardinstrumenttypeEditCtrl', function ($scope, $stateParams, InstrumentTypeService, standardDeviceInstrumentType, CommonService) {
+    .controller('SystemStandardinstrumenttypeEditCtrl', function ($scope, $stateParams, InstrumentTypeService, StandardDeviceInstrumentTypeService, CommonService) {
         var self = this;
 
         self.init = (function () {
             // 初始化控制器信息
-            standardDeviceInstrumentType.addAndEditInit(self, $scope);
+            StandardDeviceInstrumentTypeService.addAndEditInit(self, $scope);
 
             // 获取器具类别
             InstrumentTypeService.get($stateParams.id, function (response) {

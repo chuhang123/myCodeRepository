@@ -69,7 +69,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         webAppMenus.add(standardMenu);
 
         WebAppMenu standardFileMenu = new WebAppMenu();
-        standardFileMenu.setRouteName("File");
+        standardFileMenu.setRouteName("integratedQuery");
         standardFileMenu.setParentRouteWebAppMenu(standardMenu);
         standardFileMenu.setParentWebAppMenu(standardMenu);
         standardFileMenu.setName("综合查询");
@@ -78,7 +78,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         webAppMenus.add(standardFileMenu);
 
         WebAppMenu deviceSetManageMenu = new WebAppMenu();
-        deviceSetManageMenu.setRouteName("deviceSetManage");
+        deviceSetManageMenu.setRouteName("deviceSet");
         deviceSetManageMenu.setParentRouteWebAppMenu(standardMenu);
         deviceSetManageMenu.setParentWebAppMenu(standardMenu);
         deviceSetManageMenu.setName("档案管理");
@@ -87,7 +87,7 @@ public class WebAppMenuDataInit implements ApplicationListener<ContextRefreshedE
         webAppMenus.add(deviceSetManageMenu);
 
         WebAppMenu standardAuthorizationManageMenu = new WebAppMenu();
-        standardAuthorizationManageMenu.setRouteName("FileDeviceInstrument");
+        standardAuthorizationManageMenu.setRouteName("deviceInstrument");
         standardAuthorizationManageMenu.setParentRouteWebAppMenu(standardMenu);
         standardAuthorizationManageMenu.setParentWebAppMenu(standardMenu);
         standardAuthorizationManageMenu.setName("授权检定项目管理");

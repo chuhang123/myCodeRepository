@@ -8,11 +8,11 @@
  * Controller of the webappApp
  */
 angular.module('webappApp')
-    .controller('SystemStandardinstrumenttypeIndexCtrl', function ($stateParams, $scope, CommonService, standardDeviceInstrumentType) {
+    .controller('SystemStandardinstrumenttypeIndexCtrl', function ($stateParams, $scope, CommonService, StandardDeviceInstrumentTypeService) {
         var self = this;
 
         self.init = function () {
-            standardDeviceInstrumentType.initController(self, $scope, $stateParams);
+            StandardDeviceInstrumentTypeService.initController(self, $scope, $stateParams);
             $scope.params = self.initScopeParams();
             self.load();
 

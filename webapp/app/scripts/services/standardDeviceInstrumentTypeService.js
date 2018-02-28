@@ -8,7 +8,7 @@
  * Service in the webappApp.
  */
 angular.module('webappApp')
-    .service('standardDeviceInstrumentType', function ($http, $uibModal, $state, CommonService, InstrumentFirstLevelTypeService, PurposeService) {
+    .service('StandardDeviceInstrumentTypeService', function ($http, $uibModal, $state, CommonService, InstrumentFirstLevelTypeService, PurposeService) {
         var self = this;
 
         self.initController = function (controller, scope, stateParams) {
@@ -357,6 +357,16 @@ angular.module('webappApp')
                 });
         };
 
+        self.getAllByDisciplineId = function (disciplineId, callback) {
+            var url = '/StandardDeviceInstrumentType/getAllByDisciplineId/' + disciplineId;
+            $http.get(url)
+                .then(function success(response) {
+                    callback(response.data);
+                }, function error(response) {
+                    CommonService.httpError(response);
+                });
+        };
+
         self.delete = function(id, callback) {
             $http.delete('/StandardDeviceInstrumentType/' + id)
                 .then(function success(response) {
@@ -368,9 +378,31 @@ angular.module('webappApp')
                 });
         };
 
+        /**
+         * 获取某个一级类别下的所有数据
+         * @param instrumentFirstLevelTypeId 器具一级类别ID
+         * @param callback
+         * @author panjie
+         */
+        self.getAllByInstrumentFirstLevelTypeId = function (instrumentFirstLevelTypeId, callback) {
+            var url = '/StandardDeviceInstrumentType/getAllByInstrumentFirstLevelTypeId/' + instrumentFirstLevelTypeId;
+            $http.get(url)
+                .then(function success(response) {
+                    if (callback) {
+                        callback(response);
+                    }
+                }, function error(response) {
+                    CommonService.httpError(response);
+                });
+
+        };
+
+
         return {
             initController: self.initController,
             pageByDisciplineId: self.pageByDisciplineId,
-            addAndEditInit: self.addAndEditInit
+            addAndEditInit: self.addAndEditInit,
+            getAllByInstrumentFirstLevelTypeId: self.getAllByInstrumentFirstLevelTypeId,
+            getAllByDisciplineId: self.getAllByDisciplineId
         };
     });

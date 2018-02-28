@@ -28,8 +28,18 @@ public class StandardDeviceInstrumentTypeController {
 
     @GetMapping("/pageByDisciplineId/{disciplineId}")
     @JsonView(StandardDeviceInstrumentTypeJsonView.baseJsonView.class)
-    public Page<StandardDeviceInstrumentType> pageByDisciplineId(@PathVariable Long disciplineId, @SortDefault.SortDefaults(@SortDefault(sort = "id", direction = Sort.Direction.DESC)) Pageable pageable) {
-        Page<StandardDeviceInstrumentType> standardDeviceInstrumentTypes = standardDeviceInstrumentTypeRepository.pageByDisciplineId(disciplineId, pageable);
+    public Page<StandardDeviceInstrumentType> pageByDisciplineId(@PathVariable Long disciplineId, @SortDefault
+            .SortDefaults(@SortDefault(sort = "id", direction = Sort.Direction.DESC)) Pageable pageable) {
+        Page<StandardDeviceInstrumentType> standardDeviceInstrumentTypes = standardDeviceInstrumentTypeRepository
+                .pageByDisciplineId(disciplineId, pageable);
+        return standardDeviceInstrumentTypes;
+    }
+
+    @GetMapping("/getAllByDisciplineId/{disciplineId}")
+    @JsonView(StandardDeviceInstrumentTypeJsonView.baseJsonView.class)
+    public Iterable<StandardDeviceInstrumentType> getAllByDisciplineId(@PathVariable Long disciplineId) {
+        Iterable<StandardDeviceInstrumentType> standardDeviceInstrumentTypes = standardDeviceInstrumentTypeRepository
+                .getAllByDisciplineId(disciplineId);
         return standardDeviceInstrumentTypes;
     }
 
@@ -63,6 +73,14 @@ public class StandardDeviceInstrumentTypeController {
     public void delete(@PathVariable Long id) {
         standardDeviceInstrumentTypeRepository.delete(id);
         return;
+    }
+
+    @GetMapping("/getAllByInstrumentFirstLevelTypeId/{instrumentFirstLevelTypeId}")
+    @JsonView(StandardDeviceInstrumentTypeJsonView.baseJsonView.class)
+    public Iterable<StandardDeviceInstrumentType> getAllByInstrumentFirstLevelTypeId(@PathVariable Long
+            
+                                                                                                 instrumentFirstLevelTypeId) {
+        return standardDeviceInstrumentTypeRepository.findAllByInstrumentFirstLevelTypeId(instrumentFirstLevelTypeId);
     }
 
 }
